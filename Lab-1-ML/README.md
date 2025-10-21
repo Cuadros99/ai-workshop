@@ -5,7 +5,18 @@ Siga as instruções abaixo para **construir e executar** o container Docker com
 
 ---
 
-## 🧱 1. Construir a imagem
+## 🎲 1. Baixar dataset
+
+Baixar o dataset no link https://www.kaggle.com/datasets/solarmainframe/ids-intrusion-csv?select=02-15-2018.csv
+
+Armazená-lo na pasta dataset
+
+```bash
+mkdir dataset
+```
+
+
+## 🧱 2. Construir a imagem
 
 No terminal, dentro da pasta do projeto, execute:
 
@@ -13,7 +24,7 @@ No terminal, dentro da pasta do projeto, execute:
 sudo docker build -t lab-1-image .
 ```
 
-## 📂 2. Criar a pasta de saída
+## 📂 3. Criar a pasta de saída
 
 Esta pasta armazenará os artefatos e resultados gerados pelo notebook.
 
@@ -21,7 +32,7 @@ Esta pasta armazenará os artefatos e resultados gerados pelo notebook.
 mkdir -p output
 ```
 
-## 🚀 3. Executar o container
+## 🚀 4. Executar o container
 
 Rode o container com o comando abaixo:
 
@@ -34,7 +45,7 @@ sudo docker run --rm -it \
   lab-1-image
 ```
 
-## 📊 4. Acessar o Jupyter Notebook
+## 📊 5. Acessar o Jupyter Notebook
 
 Após o container iniciar, o terminal exibirá uma URL parecida com:
 
@@ -42,7 +53,7 @@ Após o container iniciar, o terminal exibirá uma URL parecida com:
 http://127.0.0.1:8888/?token=<seu_token_aqui>
 ```
 
-## 🧩 5. (Opcional) Monitorar o uso de recursos
+## 🧩 6. (Opcional) Monitorar o uso de recursos
 
 Para verificar o consumo de CPU e memória dentro do container:
 
