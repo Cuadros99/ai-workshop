@@ -5,7 +5,22 @@ Siga as instruções abaixo para **construir e executar** o container Docker com
 
 ---
 
-## 🧱 1. Construir a imagem
+## 🔒 1. Preencher .env
+
+No terminal, dentro da pasta do projeto, execute:
+
+```bash
+mv .env-example .env
+```
+
+Agora vamos preencher o .env com a chave de API da OpenAI
+
+```bash
+nano .env
+```
+
+
+## 🧱 2. Construir a imagem
 
 No terminal, dentro da pasta do projeto, execute:
 
@@ -13,7 +28,7 @@ No terminal, dentro da pasta do projeto, execute:
 sudo docker build -t lab-2-image .
 ```
 
-## 📂 2. Criar a pasta de saída
+## 📂 3. Criar a pasta de saída
 
 Esta pasta armazenará os artefatos e resultados gerados pelo notebook.
 
@@ -21,7 +36,7 @@ Esta pasta armazenará os artefatos e resultados gerados pelo notebook.
 mkdir -p output
 ```
 
-## 🚀 3. Executar o container
+## 🚀 4. Executar o container
 
 Rode o container com o comando abaixo:
 
@@ -35,7 +50,7 @@ sudo docker run --rm -it \
   lab-2-image
 ```
 
-## 📊 4. Acessar o Jupyter Notebook
+## 📊 5. Acessar o Jupyter Notebook
 
 Após o container iniciar, o terminal exibirá uma URL parecida com:
 
@@ -43,12 +58,15 @@ Após o container iniciar, o terminal exibirá uma URL parecida com:
 http://127.0.0.1:8888/?token=<seu_token_aqui>
 ```
 
-## 🧩 5. (Opcional) Monitorar o uso de recursos
+## 🧩 6. (Opcional) Monitorar o uso de recursos
 
 Para verificar o consumo de CPU e memória dentro do container:
 
 ```bash
 sudo docker exec -it lab-2-container /bin/bash
+```
+
+```bash
 htop
 ```
 
@@ -56,6 +74,12 @@ htop
 
 - O container é temporário (--rm), ou seja, será removido automaticamente ao encerrar.
 - Todos os arquivos gerados pelo notebook serão salvos na pasta local output/.
+- Em caso de erro para fazer o pull da imagem python:3.11, rodar o seguinte comando:
+
+```bash
+docker pull python:3.11
+```
+
 
 ## 📘 Pronto!
 

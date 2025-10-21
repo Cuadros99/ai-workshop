@@ -7,13 +7,9 @@ Siga as instruções abaixo para **construir e executar** o container Docker com
 
 ## 🎲 1. Baixar dataset
 
-Baixar o dataset no link https://www.kaggle.com/datasets/solarmainframe/ids-intrusion-csv?select=02-15-2018.csv
+Baixar o dataset no link https://drive.google.com/file/d/1rA7IL03JcvlhEGai5Zk6s4SPktBRwKca/view?usp=sharing
 
-Armazená-lo na pasta dataset
-
-```bash
-mkdir dataset
-```
+Armazená-lo na pasta **dataset**
 
 
 ## 🧱 2. Construir a imagem
@@ -59,6 +55,9 @@ Para verificar o consumo de CPU e memória dentro do container:
 
 ```bash
 sudo docker exec -it lab-1-container /bin/bash
+```
+
+```bash
 htop
 ```
 
