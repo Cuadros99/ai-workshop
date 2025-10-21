@@ -1,2 +1,8 @@
+# Folders
 venv/
 Lab-1-ML/venv-lab-1/
+*/output/
+
+# Files
+.env
+*.log
