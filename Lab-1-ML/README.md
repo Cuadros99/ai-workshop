@@ -9,7 +9,7 @@ Siga as instruções abaixo para **construir e executar** o container Docker com
 
 Baixar o dataset no link https://drive.google.com/file/d/1rA7IL03JcvlhEGai5Zk6s4SPktBRwKca/view?usp=sharing
 
-Armazená-lo na pasta **dataset**
+Armazená-lo na pasta **dataset** do diretório do projeto.
 
 
 ## 🧱 2. Construir a imagem
